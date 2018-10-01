@@ -3,7 +3,7 @@
  * @param {string} keyName name of the property to search for.
  * @param {boolean} unique sets the unique or not for the result list.
  * */
-function getPropertyByValue(list, keyName, unique){
+export default function getPropertyByValue(list, keyName, unique){
     let result = [];
 
     if(!keyName){
@@ -49,7 +49,3 @@ function helper(obj, keys){
     }
     return result;
 }
-
-exports = {
-    getPropertyByValue: getPropertyByValue
-};
