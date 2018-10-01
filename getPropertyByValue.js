@@ -1,8 +1,9 @@
 /**
  * @param {object} list the list of objects or object.
  * @param {string} keyName name of the property to search for.
+ * @param {boolean} unique sets the unique or not for the result list.
  * */
-function getPropertyByValue(list, keyName){
+function getPropertyByValue(list, keyName, unique){
     let result = [];
 
     if(!keyName){
@@ -12,11 +13,15 @@ function getPropertyByValue(list, keyName){
     const keys = keyName.split(".");
 
     if(typeof (list) === "object" && !Array.isArray(list)){
-        result = helper(list, keys);
+        result = helper({...list}, keys);
     }else {
-        for(let obj of list){
+        for(let obj of [...list]){
             result.push(helper(obj, keys));
         }
+    }
+
+    if(unique && Array.isArray(list)){
+        result = [...new Set(result)];
     }
 
     return result;
