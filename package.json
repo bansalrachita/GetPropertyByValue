@@ -1,6 +1,6 @@
 {
   "name": "get-object-property-values",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Gets the value of the object property if it exists in a deeply nested object.",
   "main": "getPropertyByValue.js",
   "scripts": {
