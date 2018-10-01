@@ -9,11 +9,13 @@ function getPropertyByValue(list, keyName){
         return null;
     }
 
+    const keys = keyName.split(".");
+
     if(typeof (list) === "object" && !Array.isArray(list)){
-        result = helper(list, keyName);
+        result = helper(list, keys);
     }else {
         for(let obj of list){
-            result.push(helper(obj, keyName));
+            result.push(helper(obj, keys));
         }
     }
 
@@ -22,18 +24,21 @@ function getPropertyByValue(list, keyName){
 
 /**
  * @param {object} obj the object to search property.
- * @param {string} keyName name of the property to search for.
+ * @param {array} keys list of nested keys of the object to search on.
  * */
-function helper(obj, keyName){
+function helper(obj, keys){
+    if(!keys.length){
+        return obj;
+    }
+
     let result = null;
 
     if(typeof (obj) === "object" && !Array.isArray(obj)){
-        for(let value in obj){
-            if(value === keyName){
-                result = obj[value];
-                break;
+        for(let key of keys) {
+            if(obj[key]){
+                result = helper(obj[key], keys.slice(1,keys.length));
             }else {
-                result = helper(obj[value], keyName);
+                break;
             }
         }
     }

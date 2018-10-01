@@ -11,15 +11,15 @@ const obj = {
     fauna: {
         mammals : {
             carnivores: {
-                cat: ["lion"]
+                family: cat
             }
         }
     }
 }
 
-console.log(getPropertyByValue(obj, "cat"));
+console.log(getPropertyByValue(obj, "fauna.mammals.carnivores.family"));
 
-// lion
+// cat
 
 const list = [
         {
@@ -41,7 +41,7 @@ const list = [
         }
     ]
 
-console.log(getPropertyByValue(list, "type"));
+console.log(getPropertyByValue(list, "fauna.mammals.type"));
 
 //["carnivores", "marsupials"]
 ```
