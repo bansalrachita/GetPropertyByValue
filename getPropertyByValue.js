@@ -39,10 +39,6 @@ function helper(obj, keyName){
     }
     return result;
 }
-const time = new Date().getMilliseconds();
-console.log("getPropertyByValue: ", getPropertyByValue({}, "username"));
-const endTime = new Date().getMilliseconds();
-console.log("total time : ", endTime - time);
 
 exports = {
     getPropertyByValue: getPropertyByValue

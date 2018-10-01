@@ -1,14 +1,14 @@
 {
-  "name": "getvalueofproperty",
+  "name": "get-property-by-value",
   "version": "1.0.0",
   "description": "Gets the value of the object property if it exists in a deeply nested object.",
-  "main": "",
+  "main": "getPropertyByValue.js",
   "scripts": {
     "test": "npm test"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/bansalrachita/getPropertyByValue.git"
+    "url": "git+https://github.com/bansalrachita/getPropertyByValue.git"
   },
   "keywords": [
     "Object",
