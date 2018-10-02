@@ -14,6 +14,12 @@ The functions has 3 parameters.
 ```
 getPropertyByValue(list, property, unique);
 ```
+The package can be imported using ES6 import and CJS require.
+```
+import {getPropertyByValue} from "get-object-property-values";
+OR
+const getPropertyByValue = require("get-object-property-values").getPropertyByValue;
+```
 
 ```
 For e.g. 
