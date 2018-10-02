@@ -1,8 +1,8 @@
 {
   "name": "get-object-property-values",
-  "version": "1.3.0",
+  "version": "1.2.0",
   "description": "Gets the value of the object property if it exists in a deeply nested object.",
-  "main": "src/getPropertyByValue.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "npm test",
     "build": "babel --out-dir dist src",
@@ -36,9 +36,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-runtime": "^6.26.0",
-    "rimraf": "^2.6.2"
-  },
-  "dependencies": {
+    "rimraf": "^2.6.2",
     "babel-preset-stage-2": "^6.24.1"
   }
 }
