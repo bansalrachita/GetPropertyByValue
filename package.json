@@ -2,7 +2,7 @@
   "name": "get-object-property-values",
   "version": "1.2.0",
   "description": "Gets the value of the object property if it exists in a deeply nested object.",
-  "main": "src/index.js",
+  "main": "dist/getPropertyByValue.js",
   "scripts": {
     "test": "npm test",
     "build": "babel --out-dir dist src",
