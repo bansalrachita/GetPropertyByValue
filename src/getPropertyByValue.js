@@ -3,7 +3,7 @@
  * @param {string} keyName name of the property to search for.
  * @param {boolean} unique sets the unique or not for the result list.
  * */
-export const getPropertyByValue = (list, keyName, unique)  => {
+export const getPropertyByValue = (list, keyName, unique) => {
     let result = [];
 
     if (!keyName) {
@@ -35,14 +35,12 @@ const helper = (obj, keys) => {
     if (!keys.length) {
         return obj;
     }
-
     let result = null;
 
     if (typeof (obj) === "object" && !Array.isArray(obj)) {
         for (let key of keys) {
             if (obj[key]) {
-                result = helper(obj[key], keys.slice(1, keys.length));
-            } else {
+                result = helper(obj[key], keys.slice(1));
                 break;
             }
         }
